@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Vishwakarma: A Cosmic Blueprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1A1A2E;
+            color: #E0E0E0;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .card {
+            background-color: #1F1F3D;
+            border: 1px solid #2A2A4E;
+        }
+        .highlight-text {
+            color: #40E0D0;
+        }
+        .swot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight">Vikas Akhilesh Vishwakarma</h1>
+            <p class="text-2xl font-semibold text-cyan-400 mt-2">A Cosmic Blueprint Analysis</p>
+        </header>
+
+        <main class="space-y-12">
+            
+            <section class="card rounded-2xl shadow-2xl p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">The Core Self: Virgo Ascendant</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8 text-slate-300">
+                    Your Ascendant (Lagna) is Virgo, ruled by the planet Mercury. This is the foundation of your personality, influencing how you interact with the world. It imbues you with a unique blend of analytical thinking, practicality, and a detail-oriented nature, shaping your core identity and approach to life's challenges and opportunities.
+                </p>
+                <div class="chart-container h-[350px] md:h-[400px]">
+                    <canvas id="personalityRadarChart"></canvas>
+                </div>
+                <p class="text-center mt-6 text-sm text-slate-400">This radar chart visualizes the key personality traits associated with a Virgo Ascendant. The further a point is from the center, the more pronounced the trait. Your chart indicates a strong inclination towards analytical and practical skills.</p>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                 <div class="card rounded-2xl shadow-2xl p-6 md:p-8 lg:col-span-2">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Key Planetary Strengths</h2>
+                    <p class="text-center max-w-3xl mx-auto mb-8 text-slate-300">
+                        Each planet in your Kundali resides in a specific zodiac sign, governing different facets of your life from career to emotions. The strength and position of these planets reveal your natural talents and areas of focus. Below, we analyze the influence of your key planetary placements.
+                    </p>
+                </div>
+
+                <div class="card rounded-2xl shadow-2xl p-6 flex flex-col items-center text-center">
+                    <h3 class="text-xl font-bold mb-2">Sun in Capricorn <span class="text-xs font-medium highlight-text">(Raja Yoga)</span></h3>
+                    <p class="text-sm text-slate-400 mb-4 h-20">A powerful placement indicating ambition, responsibility, and a drive for worldly success. This forms a "Kingly Yoga," suggesting potential for authority and professional achievement.</p>
+                    <div class="w-32 h-32"><canvas id="sunDonut"></canvas></div>
+                </div>
+
+                <div class="card rounded-2xl shadow-2xl p-6 flex flex-col items-center text-center">
+                    <h3 class="text-xl font-bold mb-2">Saturn in Aquarius</h3>
+                    <p class="text-sm text-slate-400 mb-4 h-20">Saturn is very strong in its own sign of Aquarius, providing a disciplined and reliable approach to innovation, social causes, and long-term goals. You excel at managing routines and solving problems.</p>
+                    <div class="w-32 h-32"><canvas id="saturnDonut"></canvas></div>
+                </div>
+
+                <div class="card rounded-2xl shadow-2xl p-6 flex flex-col items-center text-center">
+                    <h3 class="text-xl font-bold mb-2">Jupiter in Scorpio</h3>
+                    <p class="text-sm text-slate-400 mb-4 h-20">This placement grants deep, intuitive wisdom and an interest in research or transformative knowledge. It suggests fortune through joint resources and profound insights into complex subjects.</p>
+                    <div class="w-32 h-32"><canvas id="jupiterDonut"></canvas></div>
+                </div>
+
+                <div class="card rounded-2xl shadow-2xl p-6 flex flex-col items-center text-center">
+                    <h3 class="text-xl font-bold mb-2">Mars in Sagittarius</h3>
+                    <p class="text-sm text-slate-400 mb-4 h-20">Your energy and drive (Mars) are directed towards ideals, expansion, and higher learning. This placement fuels a passion for philosophy, long journeys, and building a secure foundation.</p>
+                    <div class="w-32 h-32"><canvas id="marsDonut"></canvas></div>
+                </div>
+            </section>
+            
+            <section class="card rounded-2xl shadow-2xl p-6 md:p-8">
+                 <h2 class="text-2xl md:text-3xl font-bold mb-2 text-center">Competitive Landscape: A SWOT Analysis</h2>
+                 <p class="text-center max-w-3xl mx-auto mb-8 text-slate-300">Translating your astrological placements into a strategic framework provides a clear view of your innate competitive advantages and areas for growth. This SWOT analysis synthesizes the planetary data into actionable insights.</p>
+                <div class="swot-grid">
+                    <div class="bg-slate-800/50 rounded-lg p-4 border border-green-500/50">
+                        <h3 class="font-bold text-lg text-green-400">Strengths</h3>
+                        <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                            <li><span class="font-semibold">Analytical Mind (Virgo):</span> Detail-oriented and methodical.</li>
+                            <li><span class="font-semibold">Strong Work Ethic (Sun):</span> Responsible and ambitious.</li>
+                            <li><span class="font-semibold">Disciplined Innovator (Saturn):</span> Reliable in long-term goals.</li>
+                            <li><span class="font-semibold">Intuitive Wisdom (Jupiter):</span> Deep and insightful.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-slate-800/50 rounded-lg p-4 border border-red-500/50">
+                        <h3 class="font-bold text-lg text-red-400">Weaknesses</h3>
+                         <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                            <li><span class="font-semibold">Overthinking (Virgo):</span> Prone to worry and anxiety.</li>
+                            <li><span class="font-semibold">Detachment (Ketu):</span> Natural disinterest in some areas of growth.</li>
+                             <li><span class="font-semibold">Intense Focus (Rahu):</span> Can lead to obsession in communication.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-slate-800/50 rounded-lg p-4 border border-blue-500/50">
+                        <h3 class="font-bold text-lg text-blue-400">Opportunities</h3>
+                         <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                           <li><span class="font-semibold">Leadership Roles (Sun):</span> Raja Yoga indicates potential for authority.</li>
+                           <li><span class="font-semibold">Financial Gains (Jupiter):</span> Through joint resources or legacies.</li>
+                           <li><span class="font-semibold">Skill Mastery (Rahu):</span> Karmic drive to excel in communication fields.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-slate-800/50 rounded-lg p-4 border border-amber-500/50">
+                        <h3 class="font-bold text-lg text-amber-400">Threats</h3>
+                         <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                            <li><span class="font-semibold">Analysis Paralysis (Virgo):</span> Perfectionism can hinder progress.</li>
+                             <li><span class="font-semibold">Unconventional Paths (Rahu):</span> May lead to conflict if not managed.</li>
+                             <li><span class="font-semibold">Emotional Sensitivity (Moon):</span> Can be a vulnerability if not balanced.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card rounded-2xl shadow-2xl p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2 text-center">The Karmic Axis: Process Flow of Life Lessons</h2>
+                 <p class="text-center max-w-3xl mx-auto mb-8 text-slate-300">The lunar nodes, Rahu and Ketu, form a karmic axis that reveals your life's path. Ketu represents past-life mastery and areas of innate comfort, while Rahu indicates the new territory you are driven to explore and master in this lifetime. This flow shows your journey from detached mastery to focused growth.</p>
+
+                <div class="flex items-center justify-center space-x-4 md:space-x-8 my-8">
+                    <div class="text-center w-1/3">
+                        <h3 class="font-bold text-lg text-cyan-400">KETU (Past Mastery)</h3>
+                        <p class="text-sm text-slate-300 mt-1">in Taurus / 9th House</p>
+                        <p class="text-xs mt-2 bg-slate-800/50 p-2 rounded">Comfortable with spirituality, philosophy, and higher education. A natural detachment from these areas.</p>
+                    </div>
+                    
+                    <div class="w-1/3 flex flex-col items-center">
+                        <div class="font-mono text-3xl text-slate-500 transform -translate-y-2">→</div>
+                         <div class="text-xs font-bold tracking-widest text-slate-400">KARMA</div>
+                        <div class="font-mono text-3xl text-slate-500 transform translate-y-2">→</div>
+                    </div>
+                    
+                    <div class="text-center w-1/3">
+                        <h3 class="font-bold text-lg text-rose-400">RAHU (Future Focus)</h3>
+                        <p class="text-sm text-slate-300 mt-1">in Scorpio / 3rd House</p>
+                         <p class="text-xs mt-2 bg-slate-800/50 p-2 rounded">Intense karmic drive to master communication, writing, marketing, and new skills. Area of growth and obsession.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="text-center mt-16 text-slate-500 text-sm">
+            <p>This infographic is based on astrological interpretations and should be considered for guidance and self-exploration. Precision requires deeper analysis with exact planetary degrees.</p>
+            <p>Generated by Canvas Infographics. No SVG or Mermaid JS used in this visualization.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        window.onload = function() {
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                return Array.isArray(label) ? label.join(' ') : label;
+                            }
+                        }
+                    }
+                }
+            };
+            
+            const processLongLabels = (labels, maxLength = 16) => {
+                return labels.map(label => {
+                    if (label.length <= maxLength) return label;
+                    const words = label.split(' ');
+                    let currentLine = '';
+                    const newLabels = [];
+                    words.forEach(word => {
+                        if ((currentLine + word).length > maxLength) {
+                            newLabels.push(currentLine.trim());
+                            currentLine = '';
+                        }
+                        currentLine += word + ' ';
+                    });
+                    newLabels.push(currentLine.trim());
+                    return newLabels;
+                });
+            };
+
+            const createPersonalityRadar = () => {
+                const ctx = document.getElementById('personalityRadarChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Analytical', 'Practical', ['Service', 'Oriented'], 'Detail-Oriented', ['Health', 'Conscious'], 'Prone to Worry'],
+                        datasets: [{
+                            label: 'Virgo Ascendant Traits',
+                            data: [9, 8, 7, 9, 6, 7],
+                            fill: true,
+                            backgroundColor: 'rgba(64, 224, 208, 0.2)',
+                            borderColor: 'rgb(64, 224, 208)',
+                            pointBackgroundColor: 'rgb(64, 224, 208)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgb(64, 224, 208)'
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        ...tooltipTitleCallback,
+                        scales: {
+                            r: {
+                                angleLines: { color: 'rgba(255, 255, 255, 0.2)' },
+                                grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                                pointLabels: { 
+                                    font: { size: 12 },
+                                    color: '#E0E0E0' 
+                                },
+                                ticks: {
+                                    backdropColor: 'rgba(0,0,0,0)',
+                                    color: '#E0E0E0',
+                                    stepSize: 2
+                                }
+                            }
+                        },
+                        plugins: {
+                            ...tooltipTitleCallback.plugins,
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            };
+            
+            const createPlanetDonut = (id, label, value, color) => {
+                 const ctx = document.getElementById(id).getContext('2d');
+                 new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [label, ''],
+                        datasets: [{
+                            data: [value, 100-value],
+                            backgroundColor: [color, '#2A2A4E'],
+                            borderColor: '#1F1F3D',
+                            borderWidth: 4,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '70%',
+                         plugins: {
+                            legend: { display: false },
+                            tooltip: { enabled: false }
+                        }
+                    }
+                 });
+            };
+
+            createPersonalityRadar();
+            createPlanetDonut('sunDonut', 'Sun Influence', 90, '#FF007F');
+            createPlanetDonut('saturnDonut', 'Saturn Influence', 85, '#7F00FF');
+            createPlanetDonut('jupiterDonut', 'Jupiter Influence', 80, '#00BFFF');
+            createPlanetDonut('marsDonut', 'Mars Influence', 75, '#FF8C00');
+        };
+    </script>
+</body>
+</html>
